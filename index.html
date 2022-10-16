@@ -14,6 +14,7 @@
         <a href="#">空的</a>
         <a href="#index">index</a>
         <button onclick="router.push('next')">next测试</button>
+        <button onclick="router.back()">back</button>
 
         <div id="index">
             index
@@ -39,7 +40,6 @@
                 console.log(this);
             }
         }]
-
         //路由器
         var router = new Router(routes, 'index');
     </script>
