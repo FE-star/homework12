@@ -1,3 +1,6 @@
+
+let Router = require('../router');
+
 describe('初始化路由', () => {
   it('default route', () => {
     //路由表
