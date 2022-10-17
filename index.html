@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>单页路由测试</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div>
-        <h1>Welcome</h1>
+      <h1>Welcome</h1>
 
-        <a href="#">空的</a>
-        <a href="#index">index</a>
-        <button onclick="router.push('next')">next测试</button>
+      <a href="#">空的</a>
+      <a href="#index">index</a>
+      <button onclick="router.push('next')">next测试</button>
 
-        <div id="index">
-            index
-        </div>
-        <div id="next">
-            next
-        </div>
+      <div id="index">index</div>
+      <div id="next">next</div>
     </div>
 
-    <script src="./router.js"></script>
-    <script>
-        //路由表
-        var routes = [{
-            id: ''
-        }, {
-            id: 'index',
-            title: '首页'
-        }, {
-            id: 'next',
-            title: '下一页',
-            handler: function() {
-                console.log("切换到next");
-                console.log(this);
-            }
-        }]
+    <script type="module">
+      import Router from "./router.js";
+      //路由表
+      var routes = [
+        {
+          id: "",
+        },
+        {
+          id: "index",
+          title: "首页",
+        },
+        {
+          id: "next",
+          title: "下一页",
+          // handler: function () {
+          //   console.log("切换到next");
+          //   console.log(this);
+          // },
+        },
+      ];
 
-        //路由器
-        var router = new Router(routes, 'index');
+      //路由器
+      var router = new Router(routes, "index");
+      window.router = router;
     </script>
-</body>
-
+  </body>
 </html>
