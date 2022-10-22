@@ -26,22 +26,39 @@
     <script src="./router.js"></script>
     <script>
         //路由表
-        var routes = [{
-            id: ''
-        }, {
-            id: 'index',
-            title: '首页'
-        }, {
-            id: 'next',
-            title: '下一页',
-            handler: function() {
-                console.log("切换到next");
-                console.log(this);
-            }
-        }]
+        // var routes = [{
+        //     id: ''
+        // }, {
+        //     id: 'index',
+        //     title: '首页'
+        // }, {
+        //     id: 'next',
+        //     title: '下一页',
+        //     handler: function() {
+        //         console.log("切换到next");
+        //         console.log(this);
+        //     }
+        // }]
 
-        //路由器
-        var router = new Router(routes, 'index');
+        // //路由器
+        // var router = new Router(routes, 'index');
+        
+    //路由表
+    var routes = [{
+      id: ''
+    }, {
+      id: 'index',
+      title: '首页'
+    }, {
+      id: 'next',
+      title: '下一页'
+    }]
+
+    //路由器
+    var router = new Router(routes, 'index');
+    router.push('next');
+    router.back();
+    console.log(router.currentRoute)
     </script>
 </body>
 
