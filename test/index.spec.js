@@ -1,3 +1,4 @@
+const Router = require('../router')
 describe('初始化路由', () => {
   it('default route', () => {
     //路由表
@@ -54,6 +55,7 @@ describe('初始化路由', () => {
     var router = new Router(routes, 'index');
     router.push('next');
     router.back();
+    console.log(router.currentRoute)
     expect(router.currentRoute).toMatchObject({
       id: 'index',
       title: '首页'
