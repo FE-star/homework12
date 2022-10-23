@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <div>
+    <div id="root">
         <h1>Welcome</h1>
 
         <a href="#">空的</a>
         <a href="#index">index</a>
         <button onclick="router.push('next')">next测试</button>
+        <button onclick="router.back('next')">back测试</button>
+        <button onclick="router.replace('index')">replace测试</button>
 
         <div id="index">
             index
