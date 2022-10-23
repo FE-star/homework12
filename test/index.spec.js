@@ -1,3 +1,4 @@
+const Router = require('../router.js');
 describe('初始化路由', () => {
   it('default route', () => {
     //路由表
